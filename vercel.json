@@ -1,0 +1,19 @@
+{
+    "version": 1,
+    "builds": [
+        {
+            "src": "/src/server.js",
+            "target": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/user/([0-9]+)",
+            "dest": "/src/routes/user.js"
+        },
+        {
+            "src": "/transaction/([0-9]+)",
+            "dest": "/src/routes/transaction.js"
+        }
+    ]
+}
